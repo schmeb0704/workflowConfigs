@@ -1,0 +1,82 @@
+{
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "zenMode.fullScreen": false,
+  "zenMode.silentNotifications": false,
+  "zenMode.hideActivityBar": false,
+  "editor.lineNumbers": "relative",
+  "editor.fontSize": 16,
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontSize": 16,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "full": {
+        "surround": "green",
+        "custom": {
+          "borderWidth": "2px",
+          "borderStyle": "dotted",
+          "borderRadius": "5px"
+        }
+      }
+    }
+  },
+  "markdown.preview.fontSize": 16,
+  "editor.guides.bracketPairs": true,
+  "highlight-matching-tag.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "highlight-matching-tag.highlightFromName": true,
+  "files.insertFinalNewline": false,
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.colorCustomizations": {},
+  "vim.leader": "<space>",
+  "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["shift+l"],
+      "commands": ["workbench.action.nextEditorInGroup"],
+      "silent": true
+    },
+    {
+      "before": ["shift+h"],
+      "commands": ["workbench.action.previousEditorInGroup"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "b", "d"],
+      "commands": ["workbench.action.terminal.killEditor"],
+      "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+    },
+  ],
+  "vim.handleKeys": {
+    "<C-f>": false,
+    // "<C-p>": false
+  },
+  "vim.foldfix": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true
+}
