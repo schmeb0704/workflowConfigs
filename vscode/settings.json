@@ -4,7 +4,7 @@
   "zenMode.hideStatusBar": false,
   "zenMode.fullScreen": false,
   "zenMode.silentNotifications": false,
-  "zenMode.hideActivityBar": false,
+  "zenMode.hideActivityBar": true,
   "editor.lineNumbers": "relative",
   "editor.fontSize": 16,
   "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
@@ -68,9 +68,14 @@
       "commands": ["workbench.action.terminal.killEditor"],
       "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
     },
+    {
+      "before": ["shift+e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+      "when": "editorFocus || terminalFocus"
+    }
   ],
   "vim.handleKeys": {
-    "<C-f>": false,
+    "<C-f>": false
     // "<C-p>": false
   },
   "vim.foldfix": true,
@@ -78,5 +83,9 @@
     "vscodevim.vim": 1
   },
   "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true
+  "vim.useCtrlKeys": true,
+  "workbench.activityBar.location": "hidden",
+  "codeium.enableConfig": {
+    "*": false
+  }
 }

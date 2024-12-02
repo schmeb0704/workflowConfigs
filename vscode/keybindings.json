@@ -93,39 +93,39 @@
   },
   {
     "key": "shift+e",
-    "command": "workbench.view.explorer",
-    "when": "editorTextFocus || terminalFocus && vim.mode != 'Insert'"
-  },
-  {
-    "key": "shift+e",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "sideBarFocus"
-  },
-  {
-    "key": "shift+e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "editorTextFocus || terminalFocus && vim.mode != 'Insert' && sideBarVisible"
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.focusLastEditorGroup",
+    "command": "workbench.action.focusFirstEditorGroup",
     "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusRightGroup",
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+h",
     "command": "workbench.action.focusSideBar",
-    "when": "editorTextFocus && vim.mode != 'Insert'"
+    "when": "editorFocus && activeEditorGroupIndex === 1"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "editorFocus && activeEditorGroupIndex !== 1"
   },
   // terminal/editor navigation
   {
     "key": "ctrl+j",
     "command": "workbench.action.terminal.toggleTerminal",
-    "when": "editorTextFocus || sideBarFocus && vim.mode != 'Insert'"
+    "when": "editorTextFocus || sideBarFocus"
   },
   {
     "key": "ctrl+k",
     "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminalFocus && vim.mode != 'Insert'"
+    "when": "terminalFocus"
   },
   // move between terminals
   {
@@ -154,6 +154,16 @@
     "command": "workbench.action.quickOpen",
     "when": "editorTextFocus && vim.mode != 'Insert'"
   },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
   // file explorer
   {
     "key": "a",
@@ -164,5 +174,9 @@
     "key": "f",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
   }
 ]
