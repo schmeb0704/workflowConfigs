@@ -1,13 +1,8 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
-    "key": "ctrl+k ctrl+w",
-    "command": "workbench.action.terminal.killEditor",
-    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
-  },
-  {
     "key": "ctrl+w",
-    "command": "-workbench.action.terminal.killEditor",
+    "command": "workbench.action.terminal.killEditor",
     "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
   },
   {
@@ -94,7 +89,7 @@
   {
     "key": "shift+e",
     "command": "workbench.action.toggleSidebarVisibility",
-    "when": "sideBarFocus"
+    "when": "sideBarFocus || terminalFocus"
   },
   {
     "key": "ctrl+l",
@@ -177,5 +172,39 @@
   {
     "key": "ctrl+n",
     "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "projectManager.listGitProjects#sideBarGit"
+  },
+  {
+    "key": "/",
+    "command": "list.find",
+    "when": "listFocus && listSupportsFind && !inputFocus"
+  },
+  {
+    "key": "R",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot"
+  },
+  {
+    "key": "gg",
+    "command": "list.focusFirst",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "Shift+g",
+    "command": "list.focusLast",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "Enter",
+    "command": "list.closeFind",
+    "when": "inputFocus && listFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
   }
 ]

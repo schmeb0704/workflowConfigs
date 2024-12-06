@@ -1,4 +1,5 @@
 {
+  "editor.inlayHints.enabled": "on",
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
@@ -15,16 +16,18 @@
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "prettier.vueIndentScriptAndStyle": true,
   "prettier.jsxSingleQuote": true,
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "modifications",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "highlight-matching-tag.styles": {
     "opening": {
       "full": {
@@ -72,11 +75,46 @@
       "before": ["shift+e"],
       "commands": ["workbench.action.toggleSidebarVisibility"],
       "when": "editorFocus || terminalFocus"
+    },
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["vscode-harpoon.addEditor"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["vscode-harpoon.editEditors"]
+    },
+    {
+      "before": ["<leader>", "p", "e"],
+      "commands": ["vscode-harpoon.editorQuickPick"]
+    },
+    {
+      "before": ["<leader>", "1"],
+      "commands": ["vscode-harpoon.gotoEditor1"]
+    },
+    {
+      "before": ["<leader>", "2"],
+      "commands": ["vscode-harpoon.gotoEditor2"]
+    },
+    {
+      "before": ["<leader>", "3"],
+      "commands": ["vscode-harpoon.gotoEditor3"]
+    },
+    {
+      "before": ["<leader>", "4"],
+      "commands": ["vscode-harpoon.gotoEditor4"]
+    },
+    {
+      "before": ["<leader>", "5"],
+      "commands": ["vscode-harpoon.gotoEditor5"]
+    },
+    {
+      "before": ["<leader>", "6"],
+      "commands": ["vscode-harpoon.gotoEditor6"]
     }
   ],
   "vim.handleKeys": {
     "<C-f>": false
-    // "<C-p>": false
   },
   "vim.foldfix": true,
   "extensions.experimental.affinity": {
@@ -84,8 +122,14 @@
   },
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
-  "workbench.activityBar.location": "hidden",
   "codeium.enableConfig": {
     "*": false
-  }
+  },
+  "projectManager.git.baseFolders": [
+    "C:/Users/Webforest-10/work",
+    "C:/Users/Webforest-10/study"
+  ],
+  "projectManager.sortList": "Recent",
+  "editor.minimap.enabled": false,
+  "workbench.activityBar.location": "hidden"
 }
